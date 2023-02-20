@@ -66,6 +66,28 @@
         text-align: center;
     }
 </style>
+<style>
+    body {
+        background-color: white;
+    }
+    .pagination {
+        display: inline-block;
+    }
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+        border: 1px solid #ddd
+    }
+    .pagination a.active {
+        background-color: #4caf50;
+        color: white;
+        border: 1px solid #4caf50;
+    }
+    .pagination a:hover:not(.active) {background-color: #ddd;}
+</style>
 </head>
 <body>
     <div class="header">
@@ -73,9 +95,9 @@
         <p>Student Artist</p>
     </div>
     <div class="topnav">
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
+        <a href="#">Classes</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
     </div>
     <div class="row">
         <div class="column side">
@@ -92,8 +114,17 @@
         </div>
     </div>
     <div class="footer">
-        <p>Contact</p>
-    /*Add drawn pngs for icons, figure out how to do animations with each icon once scrolled over*/
+        <body>
+            <div class="pagination">
+                <p><a href="#">&#9754;</a>
+                <a href="#">&#9755;</a></p>
+            </div>
+        </body>
+    </p>
+    <p>&#128392; Columbus, OH</p>
+    <p>&#128382; 224-277-4431</p>
+    <p>&#128387; Andiegoodes@gmail.com</p>
+    /*figure out how to do animations with each icon once scrolled over, modal, parallax*/
     </div>
 
 </body>
