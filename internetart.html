@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Art</title>
+</head>
+<style>
+    *{box-sizing:border-box}
+    body {margin: 0;}
+    .mySlides {display:none}
+    img {vertical-align: middle;}
+
+    /*slideshow container*/
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+    /*next buttons*/
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top:50%;
+        width:auto;
+        padding:100px;
+        margin-top: -22px;
+        color:black;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+        background-color: rgba (0,0,0,0.8);
+    }
+    .text {
+        color: black;
+        font-size: 15px;
+        padding: 8 px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+    .numbertext {
+        color: black;
+        font-size: 12px;
+        padding: 150px 375px;
+        position: absolute;
+        top: 0;
+    }
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity:1}
+    }
+    @media only screen and (max-width:300px){
+        .prev, .next, .text {font-size: 11px}
+    }
+</style>
+</head>
+<body>
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <div class="numbertext"> Weekly E (03/05/23)</div>
+        <body>
+            <p >
+                I really enjoyed doing this project this week. I liked being able to make my own website in the way that I wanted. Even with my website being a bit bare bones, I enjoy a minimal website that is straight to the point.
+                I did struggle with getting links to work as well as the slideshows for each class. I still have some confusion with settings DIVS and DIV classes and making them individual.
+                I also had a lot of trouble pushing my pages to github, as well as uploading the link, so I  had to submit a compressed file instead. I still am struggling with trying to understand github.
+                I know it will get better with time and practice, but it is just very frustrating not getting something right away. One part that I really enjoyed was including the gif header,
+                I had a lot of fun creating it. 
+                Starting javascript, my first impression was that this was really hard and it would be very difficult. But I am excited to learn how to draw while using code.
+            </p style="width:100%">
+        </body>
+        <div class="text"></div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#9754;</a>
+    <a class="next" onclick="plusSlides(1)">&#9755;</a>
+</div>
+<br>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+        let i;
+        let slides =
+        document.getElementsByClassName("mySlides");
+        let dots =
+        document.getElementsByClassName("dot");
+        if (n> slides.length){slideIndex =1}
+        if (n< 1){slidesIndex=slides.length}
+        for (i=0;i <slides.length; i++){
+            slides[i].style.display="none";
+        }
+        for (i=0; i < dots.length; i++){
+            dots[i].className.replace("active", "");
+        }
+        slides[slideIndex-1].style.display="block";
+        dots[slideIndex-1].className += "active";
+    }
+</script>
+</body>
+</html>
