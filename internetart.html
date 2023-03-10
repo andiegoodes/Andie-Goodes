@@ -5,130 +5,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internet Art</title>
-</head>
 <style>
-    *{box-sizing:border-box}
-    body {margin: 0;}
-    .mySlides {display:none}
-    img {vertical-align: middle;}
-
-    /*slideshow container*/
-    .slideshow-container {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
+    *{box-sizing: border-box;
     }
-    /*next buttons*/
-    .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top:50%;
-        width:auto;
-        padding:100px;
-        margin-top: -22px;
-        color:black;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
+    body{margin: 0;
     }
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
+    /*style the header*/
+    .header {background-color: black;
+    padding: 1px;
+    text-align: center;
     }
-    .prev:hover, .next:hover {
-        background-color: rgba (0,0,0,0.8);
+    /*Style the top navigation bar*/
+    .topnav {
+        overflow: hidden;
+        background-color: gray;
     }
-    .text {
+    /*Style the topnav links, pagination*/
+    .topnav a {
+        float: left;
+        display: block;
         color: black;
-        font-size: 15px;
-        padding: 8 px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    /*change color on hover*/
+    .topnav a :hover {background-color: white;
+        color:black;
+    }
+    /*Create three unequal columns that floats next to eather other*/
+    .column {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 50px;
+        text-decoration: none;
+    }
+    /*left and right column*/
+    .column.side {
+        width: 37.5%;
+    }
+    /*middle column*/
+    .column.middle {
+        width: 25%;
+    }
+    /*clear floats after the columns*/
+    .row:after {
+        content: "";
+        display: table;
+        clear:both;
+    }
+    /*responsive layout-makes the three columns stack on top of each other instead of next to each other*/
+    @media screen and (max-width:600px){
+        .column.side, .column.middle {
+            width:100%;
+        }
+    }
+    /*Style the footer*/
+    .footer {
+        background-color: black;
+        color: white;
+        padding: 25px;
         text-align: center;
     }
-    .numbertext {
-        color: black;
-        font-size: 12px;
-        padding: 150px 375px;
-        position: absolute;
-        top: 0;
+</style>
+<style>
+    body {
+        background-color: white;
     }
-    .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
+    .pagination {
         display: inline-block;
-        transition: background-color 0.6s ease;
     }
-    .active, .dot:hover {
-        background-color: #717171;
+    .pagination a {
+        color: white;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition:.3s;
+        border: 1px solid #ddd
     }
-    .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
+    .pagination a.active {
+        background-color: #4caf50;
+        color: white;
+        border: 1px solid #4caf50;
     }
-    @keyframes fade {
-        from {opacity: .4}
-        to {opacity:1}
-    }
-    @media only screen and (max-width:300px){
-        .prev, .next, .text {font-size: 11px}
-    }
+    .pagination a:hover:not(.active) {background-color: #ddd;}
 </style>
 </head>
 <body>
-<div class="slideshow-container">
-    <div class="mySlides fade">
-        <div class="numbertext"> Weekly E (03/05/23)</div>
-        <body>
-            <p >
-                I really enjoyed doing this project this week. I liked being able to make my own website in the way that I wanted. Even with my website being a bit bare bones, I enjoy a minimal website that is straight to the point.
-                I did struggle with getting links to work as well as the slideshows for each class. I still have some confusion with settings DIVS and DIV classes and making them individual.
-                I also had a lot of trouble pushing my pages to github, as well as uploading the link, so I  had to submit a compressed file instead. I still am struggling with trying to understand github.
-                I know it will get better with time and practice, but it is just very frustrating not getting something right away. One part that I really enjoyed was including the gif header,
-                I had a lot of fun creating it. 
-                Starting javascript, my first impression was that this was really hard and it would be very difficult. But I am excited to learn how to draw while using code.
-            </p style="width:100%">
-        </body>
-        <div class="text"></div>
+    <div class="row">
+        <div class="column side">
+            <h2>Weeklys</h2>
+            <p><a href="./weeklyA.html"> Weekly A</a></p>
+            <p><a href="./weeklyB.html"> Weekly B</a></p>
+            <p><a href="./weeklyC.html"> Weekly C</a></p>
+            <p><a href="./weeklyD.html"> Weekly D</a></p>
+            <p><a href="./weeklyE.html"> Weekly E </a></p>
+            <p><a href="./weeklyF.html"> Weekly F </a></p>
+        </div>
+        <div class="column middle">
+            <h2>Class Assignments</h2>
+            <p><a href="./poemv1.html">Poem Variation 1</a></p>
+            <p><a href="./poemv2.html">Poem Variation 2</a></p>
+            <p><a href="./poemv3.html">Poem Variation 3</a></p>
+            <p><a href="./poemv4.html">Poem Variation 4</a></p>
+            <p><a href="./poemv5.html">Poem Variation 5</a></p>
+        </div>
     </div>
-    <a class="prev" onclick="plusSlides(-1)">&#9754;</a>
-    <a class="next" onclick="plusSlides(1)">&#9755;</a>
-</div>
-<br>
-<script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-    function showSlides(n) {
-        let i;
-        let slides =
-        document.getElementsByClassName("mySlides");
-        let dots =
-        document.getElementsByClassName("dot");
-        if (n> slides.length){slideIndex =1}
-        if (n< 1){slidesIndex=slides.length}
-        for (i=0;i <slides.length; i++){
-            slides[i].style.display="none";
-        }
-        for (i=0; i < dots.length; i++){
-            dots[i].className.replace("active", "");
-        }
-        slides[slideIndex-1].style.display="block";
-        dots[slideIndex-1].className += "active";
-    }
-</script>
 </body>
 </html>
