@@ -4,124 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./website.css">
-    <title>Andie Goodes</title>
-<style>
-    *{box-sizing: border-box;
-    }
-    body{margin: 0;
-    }
-    /*style the header*/
-    .header {background-color: black;
-    padding: 1px;
-    text-align: center;
-    }
-    /*Style the top navigation bar*/
-    .topnav {
-        overflow: hidden;
-        background-color: gray;
-    }
-    /*Style the topnav links, pagination*/
-    .topnav a {
-        float: left;
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    /*change color on hover*/
-    .topnav a :hover {background-color: white;
-        color:black;
-    }
-    /*Create three unequal columns that floats next to eather other*/
-    .column {
-        float: left;
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 50px;
-        text-decoration: none;
-    }
-    /*left and right column*/
-    .column.side {
-        width: 37.5%;
-    }
-    /*middle column*/
-    .column.middle {
-        width: 25%;
-    }
-    /*clear floats after the columns*/
-    .row:after {
-        content: "";
-        display: table;
-        clear:both;
-    }
-    /*responsive layout-makes the three columns stack on top of each other instead of next to each other*/
-    @media screen and (max-width:600px){
-        .column.side, .column.middle {
-            width:100%;
-        }
-    }
-    /*Style the footer*/
-    .footer {
-        background-color: black;
-        color: white;
-        padding: 25px;
-        text-align: center;
-    }
-</style>
-<style>
-    body {
-        background-color: white;
-    }
-    .pagination {
-        display: inline-block;
-    }
-    .pagination a {
-        color: white;
-        float: left;
-        padding: 8px 16px;
-        text-decoration: none;
-        transition:.3s;
-        border: 1px solid #ddd
-    }
-    .pagination a.active {
-        background-color: #4caf50;
-        color: white;
-        border: 1px solid #4caf50;
-    }
-    .pagination a:hover:not(.active) {background-color: #ddd;}
-</style>
+    <script src="p5.min.js"></script>
+    <script src="app.js"></script>
+    <title>Final Project</title>
 </head>
 <body>
-    <div class="header">
-        <img src="./img/Andie.gif" style="width:250px;height:250px;">
-        <h1></h1>
-        <p></p>
-    </div>
-    <div class="row">
-        <div class="column side">
-            <h2>Classes</h2>
-            <p><a href="./digitalimaging.html"> Digital Imaging</a></p>
-            <p><a href="./realandrecorded.html"> Real and Recorded</a></p>
-            <p><a href="./2dstudies.html"> 2-D Studies</a></p>
-            <p><a href="./3dstudies.html"> 3-D Studies</a></p>
-            <p><a href="./internetart.html"> Internet Art </a></p>
-        </div>
-        <div class="column middle">
-            <h2>About</h2>
-            <p>Student Artist</p>
-        </div>
-        <div class="column side">
-            <h2>Upcoming</h2>
-            <p><a href="#">Ceramics</a></p>
-        </div>
-    </div>
-    <div class="footer">
-    <p>&#128392; Columbus, OH</p>
-    <p>&#128382; 224-277-4431</p>
-    <p>&#128387; Andiegoodes@gmail.com</p>
-        </div>
+    <a href="./v1.html">
+        <img src="./images/title.jpg" style="width: 1900px; height: 1200px;">
+    </a>
 </body>
 </html>
